@@ -7,7 +7,7 @@ public abstract class ProxyTemplate {
 
     private static final Logger log = LoggerFactory.getLogger(ProxyTemplate.class);
 
-    public String doTemplate(final String path) {
+    public final String doTemplate(final String path) {
         final String polishedPath = polishPath(path);
         final String fetchedHtml = fetchContent(polishedPath);
         final String modifiedContent = modifyContent(fetchedHtml);
@@ -17,7 +17,7 @@ public abstract class ProxyTemplate {
         return enrichedContent;
     }
 
-    public String doEmptyTemplate() {
+    public final String doEmptyTemplate() {
         final String fetchedHtml = fetchContent();
         final String modifiedContent = modifyContent(fetchedHtml);
         final String enrichedContent = enrichWithProxy(modifiedContent);

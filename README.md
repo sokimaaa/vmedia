@@ -25,6 +25,11 @@ You can run application in dev mode by:
 ./mvnw compile quarkus:dev
 ```
 
+## Endpoint
+Proxy endpoint (with localhost)
+- `localhost:8080/proxy` - shows modified quarkus.io main page
+- `localhost:8080/proxy/{path}` - navigates to modified quarkus.io/{path} page
+
 ## Solution Limitation
 
 Due to lack of description, some corner cases were uncovered. 
